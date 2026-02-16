@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    <h2>🏷️ Nueva Categoría</h2>
+    <form action="" method="POST"> {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar Categoría</button>
+    </form>
+{% endblock %}

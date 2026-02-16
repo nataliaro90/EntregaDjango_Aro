@@ -1,0 +1,17 @@
+# Archivos temporales de Python (las carpetas que veíamos en tus fotos)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Base de datos local (opcional, pero recomendado si querés que el profe use la suya)
+# db.sqlite3
+
+# Entornos virtuales
+venv/
+env/
+.env
+
+# Archivos de configuración de VS Code o el sistema
+.vscode/
+.DS_Store
+Thumbs.db

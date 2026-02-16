@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block contenido %}
+    <h2>Buscar publicaciones</h2>
+    <p>Ingresá el título del post que querés encontrar:</p>
+    <form action="{% url 'ResultadosBusqueda' %}" method="GET">
+        <input type="text" name="titulo" placeholder="Ejemplo: Mi viaje...">
+        <input type="submit" value="Buscar">
+    </form>
+{% endblock %}

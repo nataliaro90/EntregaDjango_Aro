@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Blog de Viajes</title>
+    <style>
+        /* Configuración de colores y fuentes */
+        body {
+            background-color: #fdf2f4; /* Fondo rosa muy clarito */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #5d4046; /* Texto marrón rojizo suave */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Barra de navegación */
+        nav {
+            background-color: #f8bbd0; /* Rosa pastel fuerte */
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #880e4f; /* Rosa oscuro para los links */
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #fce4ec;
+            color: #ad1457;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h1, h2 {
+            color: #ad1457;
+            text-align: center;
+        }
+
+        /* Estilo de los formularios */
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #f48fb1;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        button, input[type="submit"] {
+            background-color: #f06292;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ec407a;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #f8bbd0;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="{% url 'Inicio' %}">🏠 Inicio</a>
+        <a href="{% url 'FormularioAutor' %}">✍️ Nuevo Autor</a>
+        <a href="{% url 'Buscar' %}">🔍 Buscar Post</a>
+    </nav>
+
+    <div class="container">
+        {% block contenido %}
+        {% endblock %}
+    </div>
+
+</body>
+</html>
